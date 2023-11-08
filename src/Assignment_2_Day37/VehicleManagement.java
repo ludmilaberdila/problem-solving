@@ -5,15 +5,14 @@ package Assignment_2_Day37;
      void displayVehicleInfo(Vehicle vehicle):
      This method should display information about the given vehicle.  */
         class VehicleManagement {
-            void operateVehicle(Vehicle vehicle) {
+            void operateVehicle(Vehicle vehicle, int speed) {
                 vehicle.start();
-                vehicle.accelerate(60);
-                vehicle.stop();
+                vehicle.accelerate(speed);
                 vehicle.brake();
+                vehicle.stop();
             }
 
             void displayVehicleInfo(Vehicle vehicle) {
-                System.out.println("Vehicle Information:");
-                operateVehicle(vehicle);
+                System.out.println(vehicle.getInfo());
             }
         }

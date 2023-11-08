@@ -14,20 +14,20 @@ package Assignment_1_Day37;
 
        double radius;
 
-       public Circle(double Radius, String name){
+       public Circle(double newRadius, String name){
            super(name);
-           this.radius = radius;
+           this.radius = newRadius;
        }
 
         @Override
         void calculateArea() {
-            double area = 3.14 * (radius * radius);
+            double area = Math.PI * (radius * radius);
             System.out.println("Area of Circle is: " + area);
         }
 
         @Override
         void calculatePerimeter() {
-            double perimeter = 2 * 3.14 * radius;
+            double perimeter = 2 * Math.PI * radius;
             System.out.println("Perimeter: " + perimeter);
 
         }

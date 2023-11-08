@@ -16,10 +16,10 @@ package Assignment_1_Day37;
        double length;
        double width;
 
-       public Rectangle(double length, double width, String name){
+       public Rectangle(double newLength, double newWidth, String name){
            super(name);
-           this.length = length;
-           this.width = width;
+           this.length = newLength;
+           this.width = newWidth;
        }
 
        @Override

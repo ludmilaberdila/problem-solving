@@ -12,8 +12,8 @@ package Assignment_1_Day37;
    abstract class Shape {
         String name;
 
-        public Shape(String name) {
-            this.name = name;
+        public Shape(String newName) {
+            this.name = newName;
         }
 
         abstract void calculateArea();
@@ -21,7 +21,7 @@ package Assignment_1_Day37;
         abstract void calculatePerimeter();
 
         void displayInfo() {
-            System.out.println("Shape" + name);
+            System.out.println("Shape: " + name);
             calculatePerimeter();
             calculatePerimeter();
         }

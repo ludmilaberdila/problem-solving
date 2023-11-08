@@ -6,7 +6,14 @@ package Assignment_2_Day37;
     Implement the openRoof method to open the roof of the car. */
 
 class Car implements Vehicle, Convertible {
-    boolean roofOpen;
+    boolean isConvertible;
+    boolean roofIsOpen = false;
+    public String name;
+    public int speed = 0;
+    public Car(String newName, boolean isConvert){
+        this.name = newName;
+        this.isConvertible = isConvert;
+    }
     @Override
     public void start() {
         System.out.println("Car started");
@@ -14,11 +21,15 @@ class Car implements Vehicle, Convertible {
 
     @Override
     public void stop() {
+        this.speed = 0;
         System.out.println("Car stopped");
     }
 
     @Override
     public void accelerate(int speed) {
+        if(speed > 0){
+            this.speed = speed;
+        }
         System.out.println("Car accelerate: " + speed + "km/h");
     }
 
@@ -29,12 +40,38 @@ class Car implements Vehicle, Convertible {
 
     @Override
     public void openRoof() {
-        if (!roofOpen) {
-            System.out.println("Car roof opened");
-            roofOpen = true;
-        } else {
-            System.out.println("Car roof is already open");
+        if (isConvertible && !roofIsOpen) {
+            System.out.println("This car is convertible. Demonstrating roof operations:");
+            roofIsOpen = true;
+        } else if(isConvertible && roofIsOpen){
+            System.out.println("This car is convertible. roof is already opened:");
+        }else {
+            System.out.println("Car doesn't have a roof");
         }
+    }
+    @Override
+    public void closeRoof(){
+        if(isConvertible && roofIsOpen){
+            System.out.println(this.name + " car is convertible. Demonstrating roof closing:");
+            roofIsOpen = false;
+        }else if(isConvertible && !roofIsOpen){
+            System.out.println(this.name + " car is convertible. roof is already closed:");
+        }
+        else {
+            System.out.println(this.name + " doesn't have a roof");
+        }
+    }
+    @Override
+    public String getInfo(){
+        String convert = "";
+        String driving = "currently driving with " + this.speed + "km/h";
+        if(!this.isConvertible){
+            convert = "not ";
+        }
+        if (this.speed == 0){
+            driving = "currently stopped";
+        }
+        return this.name + " it is " + convert + "a convertible car, " + driving;
     }
 }
 

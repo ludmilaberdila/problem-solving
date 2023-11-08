@@ -8,7 +8,7 @@ package Assignment_1_Day36;
   public class Programmer extends Employee{
 
     public Programmer(String name, double salary){
-        super(name,salary);
+        super(name, salary);
     }
 
     @Override
@@ -17,6 +17,7 @@ package Assignment_1_Day36;
 
     @Override
     public void myJob() {
-        System.out.println( "I write, modify, and test code and scripts that allow computer software and applications to function properly.");
+        System.out.println( "I write, modify, and test code and scripts that allow computer software " +
+                "and applications to function properly.");
     }
 }

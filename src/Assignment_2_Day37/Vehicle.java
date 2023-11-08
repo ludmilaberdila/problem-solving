@@ -11,5 +11,5 @@ package Assignment_2_Day37;
       void stop();
       void accelerate(int speed);
       void brake();
-
+      String getInfo();
 }
