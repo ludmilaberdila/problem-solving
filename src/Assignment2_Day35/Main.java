@@ -8,23 +8,26 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        ArrayList<Shape> shapes = new ArrayList<>();
+        ArrayList<Shape> shapes = new ArrayList<Shape>();
+
+        System.out.println();
         System.out.println("What shape do you want to created, " +
-                "chose 'c' for circle, 'r' for rectangle or" +
+                "\nenter 'c' for circle, 'r' for rectangle or" +
                 " enter 'q' any time if you want to exit");
-        while (true) {
-            String userSelection = scanner.nextLine();
+        String userSelection;
+        while(true) {
+            userSelection = scanner.nextLine();
+
             if(userSelection.toLowerCase().equals("c")){
-                System.out.println("Enter cirle radius: ");
+                System.out.print("Enter circle radius: ");
                 double radius = scanner.nextDouble();
                 Circle circle = new Circle(radius);
                 shapes.add(circle);
 
             } else if (userSelection.toLowerCase().equals("r")) {
-                System.out.println("Enter Rectangle length");
+                System.out.print("Enter Rectangle length: ");
                 double length = scanner.nextDouble();
-
-                System.out.println("Enter Rectangle width");
+                System.out.print("Enter Rectangle width: ");
                 double width = scanner.nextDouble();
 
                 Rectangle rectangle = new Rectangle(length, width);
@@ -33,14 +36,16 @@ public class Main {
                 break;
             }
             else {
-                System.out.println("you did not enter the correct value");
+                System.out.println("you did not enter the correct input (c, r, q)");
             }
             System.out.println("-------------------------");
-            System.out.print("Chose another shape c - circle, r - rectangle: ");
+            System.out.print("Chose another shape c -> circle, r -> rectangle: ");
+
+            scanner.nextLine(); // consumes the dangling newline character
         }
 
         for (Shape shape : shapes){
-            System.out.println(shape.calculateArea());
+            System.out.println(shape.shapeName() + " has area: " + shape.calculateArea());
         }
 
 

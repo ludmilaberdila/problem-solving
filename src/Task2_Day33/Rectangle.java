@@ -4,12 +4,13 @@ package Task2_Day33;
    and prints the area of the rectangle. */
 
 public class Rectangle extends Shape {
-    double length = 6;
-    double width = 8;
+    double length;
+    double width;
 
-    public  Rectangle (String name, String color){
-
+    public  Rectangle (String name, String color, double newLength, double newWidth){
         super(name, color);
+        this.length = newLength;
+        this.width = newWidth;
     }
 
     public void calculateArea(){

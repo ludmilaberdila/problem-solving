@@ -6,6 +6,6 @@ public class Animal {
         System.out.println("Animal makes a sound.");
     }
     public void animalSoundTest(Animal animal){
-       animal.makeSound();
+        animal.makeSound();
     }
 }

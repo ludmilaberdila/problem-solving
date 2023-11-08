@@ -4,11 +4,11 @@ package Task2_Day33;
     circle. */
 
 public class Circle extends Shape {
-    double radius = 4;
+    double radius;
 
-    public Circle (String name, String color){
-
+    public Circle (String name, String color, double radius){
         super(name, color);
+        this.radius = radius;
     }
 
     public void calculateArea(){

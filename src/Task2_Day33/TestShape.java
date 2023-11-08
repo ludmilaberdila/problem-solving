@@ -4,8 +4,8 @@ package Task2_Day33;
 
 public class TestShape {
     public static void main(String[] args) {
-        Circle circle = new Circle("Cirle", "Blue");
-        Rectangle rectangle = new Rectangle("Rectangle", "White");
+        Circle circle = new Circle("Cirle", "Blue", 4);
+        Rectangle rectangle = new Rectangle("Rectangle", "White", 6, 8);
 
         System.out.println(circle.name + " " + circle.color + " " + circle.radius);
         circle.calculateArea();
