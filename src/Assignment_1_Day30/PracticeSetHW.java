@@ -4,14 +4,15 @@ import java.util.HashSet;
 
 public class PracticeSetHW {
     public static void main(String[] args) {
-        /*•Create a HashSet of String “colors” and add six colors.
+        /*
+        •Create a HashSet of String “colors” and add six colors.
         •Iterate over the set and print each element.
-         •Print the number of elements in set.
+        •Print the number of elements in set.
         •Remove all elements from the set.
         •Print if the set is full or empty.
         •Add 3 elements to set.
-        •Convert the set to array and print it. */
-
+        •Convert the set to array and print it.
+         */
         HashSet<String> colors = new HashSet<String>();
         colors.add("Red");
         colors.add("Green");
@@ -19,9 +20,11 @@ public class PracticeSetHW {
         colors.add("White");
         colors.add("Gray");
         colors.add("Pink");
+
         for (String color : colors) {
-            System.out.println("Colors of elements is: " + color);
+            System.out.println("Color in colors hashSet: " + color);
         }
+
         int numberOfElements = colors.size();
         System.out.println("Number of elements is: " + numberOfElements);
 

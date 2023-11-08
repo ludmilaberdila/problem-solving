@@ -18,7 +18,9 @@ class AnimalRescueCenter {
     public void listAnimalsByType(String type){
         for (Animal animal: rescuedAnimals){
             animal.displayAnimalInfo();
-            if(animal instanceof )
+            if(animal instanceof Animal){
+                System.out.println(); // TODO: finish
+            }
         }
     }
 //    Display a list of rescued animals based on their type

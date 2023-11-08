@@ -1,6 +1,7 @@
 package Assignment_1_Day30;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Random;
 
@@ -11,13 +12,12 @@ public class PracticeSetHW3 {
         •Create new HashSet and add all elements of arrayList to the set.
         •Calculate and print number of all unsuccessful tries in task 3.  */
         Random random = new Random();
-        int randomNumber;
         int[] numberArray = new int[100];
-        for (int i = 0; i< numberArray.length; i++){
-            randomNumber = random.nextInt(1,10);
-            numberArray[i] = randomNumber;
-            System.out.println(randomNumber);
+        for (int i = 0; i < numberArray.length; i++){
+            numberArray[i] = random.nextInt(1,10);
         }
+        System.out.println(Arrays.toString(numberArray));
+
         ArrayList<Integer> oddNumbers = new ArrayList<Integer>();
         HashSet<Integer> hashSet = new HashSet<Integer>();
 
@@ -26,15 +26,10 @@ public class PracticeSetHW3 {
                 oddNumbers.add(numberArray[i]);
             }
         }
-        int nrExceptions = 0;
-        for(int num : oddNumbers ){
-            try{
-                hashSet.add(num);
-            }catch (Exception e){
-                nrExceptions++;
-            }
-
+        for(Integer number: numberArray){
+            System.out.println(number);
         }
 
+        hashSet.addAll(oddNumbers);
     }
 }
