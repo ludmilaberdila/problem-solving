@@ -26,10 +26,9 @@ public class PracticeSetHW3 {
                 oddNumbers.add(numberArray[i]);
             }
         }
-        for(Integer number: numberArray){
-            System.out.println(number);
-        }
+        System.out.println(oddNumbers);
 
         hashSet.addAll(oddNumbers);
+        System.out.println(hashSet.size());
     }
 }
