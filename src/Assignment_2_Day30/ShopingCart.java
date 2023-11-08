@@ -18,14 +18,15 @@ public class ShopingCart {
     public void calculateTotalPrice() {
         double totalPrice = 0;
         for (Product product : cart) {
-            totalPrice += product.price * product.quantity;  ///!!!!!
+            totalPrice += (product.price * product.quantity);
         }
         System.out.println(totalPrice);
     }
 
     public void removeProduct(Product product) {
-        System.out.println("You removed " + product.name + " from your cart. ");
+        String productName = product.name;
         cart.remove(product);
+        System.out.println("You removed " + productName + " from your cart. ");
     }
 }
 

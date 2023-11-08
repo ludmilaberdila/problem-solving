@@ -24,18 +24,20 @@ public class ShoppingMain {
     Product p3 = new Product("Juice", 4, 2);
     Product p4 = new Product("Cake", 19.99, 1);
 
-    ShopingCart cart = new ShopingCart();
-    cart.add(p1);
-    cart.add(p2);
-    cart.add(p3);
-    cart.add(p4);
+    ShopingCart shopingCart = new ShopingCart();
 
-    cart.displayProducts();
-    cart.calculateTotalPrice();
-    cart.removeProduct(p4);
-    cart.displayProducts();
-    cart.calculateTotalPrice();
+    shopingCart.add(p1);
+    shopingCart.add(p2);
+    shopingCart.add(p3);
+    shopingCart.add(p4);
 
+    shopingCart.displayProducts();
+
+    shopingCart.calculateTotalPrice();
+
+    shopingCart.removeProduct(p4);
+    shopingCart.displayProducts();
+    shopingCart.calculateTotalPrice();
 
     }
 }

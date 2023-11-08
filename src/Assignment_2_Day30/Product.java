@@ -10,8 +10,4 @@ public class Product {
         price = newPrice;
         quantity = newQuantity;
     }
-    void ShoppingCart(){
-
-    }
-
 }
