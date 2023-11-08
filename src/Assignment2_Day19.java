@@ -95,10 +95,23 @@ public class Assignment2_Day19 {
         int[] array = new int[10];
         Random random = new Random();
         for (int i = 0; i < array.length; i++) {
-            array[i] = random.nextInt(1,6);
+            array[i] = random.nextInt(6) + 1;
         }
-        int sum = Arrays.stream(array).filter(number -> number != 1 && number != 2).sum();
-        System.out.println("Sum of elements is: " + sum + " ; 1's and 2's not included");
+        int sum = 0;
+        for (int num : array) {
+            if (num != 1 && num != 2) {
+                sum += num;
+            }
+        }
+        System.out.print("Array: ");
+        for (int i = 0; i < array.length; i++) {
+            System.out.print(array[i]);
+            if (i < array.length - 1) {
+                System.out.print(", ");
+            }
+        }
+        System.out.println("Sum of elements is " + sum + ", 1's and 2's not included.");
     }
+
 }
 

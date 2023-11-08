@@ -1,3 +1,5 @@
+package Assign_2_Day21;
+
 import java.util.Scanner;
 
 public class Assignment2_Day21 {
@@ -39,6 +41,7 @@ public class Assignment2_Day21 {
     public static void convertToLowerCase(String message) {
         System.out.println(message.toLowerCase().replace('e', 'a'));
     }
+
 
     /*Task 4:  Medium
      (VOID)Write a Java method called calculatePower that takes two integers as parameters, a base, and an exponent

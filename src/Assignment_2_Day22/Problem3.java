@@ -1,4 +1,4 @@
-package Day22;
+package Assignment_2_Day22;
 
 import java.util.Arrays;
 

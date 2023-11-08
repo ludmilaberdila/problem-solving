@@ -1,4 +1,6 @@
-public class Assignment_Day22 {
+package Assignment_2_Day22;
+
+public class Problem1 {
     public static void main(String[] args) {
         /*Task 1:  Easy
         Create a method called calculateDiscount that takes int original price and int discountPercentage

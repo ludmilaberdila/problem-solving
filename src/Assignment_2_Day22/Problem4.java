@@ -1,9 +1,9 @@
-package Day22;
+package Assignment_2_Day22;
 
 public class Problem4 {
     public static void main(String[] args) {
           /*
-          Write a Java method called countOccurrences that takes a string and a character
+          Write a Java method called count Occurrences that takes a string and a character
            as parameters and returns the number of occurrences of the character in the string.
             Call this method in main method.
         Expected output:
