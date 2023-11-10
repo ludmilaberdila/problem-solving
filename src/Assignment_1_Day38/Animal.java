@@ -5,14 +5,14 @@ package Assignment_1_Day38;
      int age;
      boolean adoptionStatus;
 
-     public Animal(String name, int age, boolean adoptionStatus) {
-         this.name = name;
-         this.age = age;
-         this.adoptionStatus = adoptionStatus;
+     public Animal(String newName, int newAge, boolean adoptStatus) {
+         this.name = newName;
+         this.age = newAge;
+         this.adoptionStatus = adoptStatus;
      }
 
      public void displayAnimalInfo() {
-         System.out.println("Name: " + name +
+         System.out.println(this.getClass().getSimpleName() + " by name: " + name +
                  "\nAge: " + age +
                  "\nAdoption Status: " + adoptionStatus);
      }

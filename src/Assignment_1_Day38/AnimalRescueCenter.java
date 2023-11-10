@@ -10,32 +10,54 @@ class AnimalRescueCenter {
     }
 
     public void listAnimals(){
-        for (Animal animal: rescuedAnimals){
-            animal.displayAnimalInfo();
+        if(!rescuedAnimals.isEmpty()){
+            System.out.println("=====================");
+            for (Animal animal: rescuedAnimals){
+                animal.displayAnimalInfo();
+            }
+            System.out.println("=====================");
+        }else{
+            System.out.println("Currently we don't have any animals in our shelter");
         }
+
     }
 
     public void listAnimalsByType(String type){
+        String className;
+        boolean animalExists = false;
+        System.out.println("=====================");
         for (Animal animal: rescuedAnimals){
-            animal.displayAnimalInfo();
-            if(animal instanceof Animal){
-                System.out.println(); // TODO: finish
+            className = animal.getClass().getSimpleName().toLowerCase();
+            if(type.toLowerCase().equals(className)){
+                animal.displayAnimalInfo();
+                animalExists = true;
             }
         }
+        System.out.println("=====================");
+        if(!animalExists){
+            System.out.println("Sorry, no \"" + type + "\" animal in our shelter");
+        }
     }
-//    Display a list of rescued animals based on their type
-//            (Dog, Cat, or Bird) using loops and (if or switch statements)
-//    TODO: updateAdoptionStatus(String name, boolean adoptionStatus):
-//    Update the adoption status of an animal using loops by name.
 
-
-//    TODO: Create a Main class with the main method,
-//    TODO: use a Scanner to allow the user to input animal data,
-//    TODO: create an object of AnimalsRescueCenter,
-//    TODO: use while loop and conditional statements to
-//      add animal,
-//      list all animals,
-//      list animals by type,
-//      update adoption status
-//      exit.
+    public void updateAdoptionStatus(String name, boolean adoptionStatus){
+        boolean animalUpdated = false;
+        String animalType = "";
+        String adopted = "adopted, yaaaay!";
+        if(!adoptionStatus){
+            adopted = "not adopted, sorry.";
+        }
+        for (Animal animal: rescuedAnimals){
+            if(animal.name.toLowerCase().equals(name.toLowerCase())){
+                animal.adoptionStatus = adoptionStatus;
+                animalUpdated = true;
+                animalType = animal.getClass().getSimpleName();
+            }
+        }
+        if(animalUpdated){
+            System.out.println(animalType + " by name \"" + name +
+                    "\" updated adoption status: " + adopted);
+        }else {
+            System.out.println("No such animal by name \"" + name + "\" in our shelter.");
+        }
+    }
 }

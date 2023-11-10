@@ -41,24 +41,24 @@ class Car implements Vehicle, Convertible {
     @Override
     public void openRoof() {
         if (isConvertible && !roofIsOpen) {
-            System.out.println("This car is convertible. Demonstrating roof operations:");
+            System.out.println(this.name + " is convertible. Demonstrating roof operations:");
             roofIsOpen = true;
         } else if(isConvertible && roofIsOpen){
-            System.out.println("This car is convertible. roof is already opened:");
+            System.out.println(this.name + " is convertible. roof is already opened:");
         }else {
-            System.out.println("Car doesn't have a roof");
+            System.out.println(this.name + " doesn't have a roof to operate");
         }
     }
     @Override
     public void closeRoof(){
         if(isConvertible && roofIsOpen){
-            System.out.println(this.name + " car is convertible. Demonstrating roof closing:");
+            System.out.println(this.name + " is convertible. Demonstrating roof closing:");
             roofIsOpen = false;
         }else if(isConvertible && !roofIsOpen){
-            System.out.println(this.name + " car is convertible. roof is already closed:");
+            System.out.println(this.name + " is convertible. roof is already closed:");
         }
         else {
-            System.out.println(this.name + " doesn't have a roof");
+            System.out.println(this.name + " doesn't have a roof to operate");
         }
     }
     @Override
