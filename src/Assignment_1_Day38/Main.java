@@ -6,11 +6,11 @@ public class Main {
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
         AnimalRescueCenter shelter = new AnimalRescueCenter();
-        String userInput;
         boolean flagLoop = true;
+        String userInput, animalToAdd, animalType, animalName;
         int animalAge;
         boolean adoptStatus;
-        String animalType;
+
         while (flagLoop){
             System.out.println("""
                 Welcome to the Animal Rescue Center!
@@ -23,13 +23,14 @@ public class Main {
             switch(userInput) {
                 case "1":
                     System.out.println("What type of animal you want to add: ");
-                    String animalToAdd = scanner.nextLine();
+                    animalToAdd = scanner.nextLine();
                     System.out.println("Enter name: ");
-                    String animalName = scanner.nextLine();
+                    animalName = scanner.nextLine();
                     System.out.println("Enter age: ");
                     animalAge = scanner.nextInt();
                     System.out.println("Enter adoptionStatus: ");
                     adoptStatus = scanner.nextBoolean();
+
                     Animal newAnimal = null;
                     if(animalToAdd.toLowerCase().equals("dog")){
                         newAnimal = new Dog(animalName, animalAge, adoptStatus);
