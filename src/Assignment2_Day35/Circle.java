@@ -2,12 +2,12 @@ package Assignment2_Day35;
 
 public class Circle extends Shape{
     double radius;
-    String name;
+//    String name;
     static int nrCircles = 0;
     public Circle(double radius){
         this.radius = radius;
         this.nrCircles++;
-        this.name = "circle_" + this.nrCircles;
+        name = "circle_" + this.nrCircles;
     }
     @Override
     public String shapeName() {
